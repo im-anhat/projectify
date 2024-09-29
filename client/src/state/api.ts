@@ -1,4 +1,5 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
+import { fetchAuthSession, getCurrentUser } from "aws-amplify/auth";
 
 export interface Project {
   id: number;
@@ -78,6 +79,24 @@ export const api = createApi({
   reducerPath: "api",
   tagTypes: ["Projects", "Tasks", "Users", "Teams"], // Tells us where the information retrieved and stored in Redux Toolkit is via "Projects"
   endpoints: (build) => ({
+    getAuthUser: build.query({
+      queryFn: async (_, _queryApi, _extraoptions, fetchWithBQ) => {
+        try {
+          const user = await getCurrentUser();
+          const session = await fetchAuthSession();
+          if (!session) throw new Error("No session found");
+          const { userSub } = session;
+          const { accessToken } = session.tokens ?? {}; // we dont need it here but may need it in some future?
+
+          const userDetailsResponse = await fetchWithBQ(`users/${userSub}`);
+          const userDetails = userDetailsResponse.data as User;
+
+          return { data: { user, userSub, userDetails } };
+        } catch (error: any) {
+          return { error: error.message || "Could not fetch user data" };
+        }
+      },
+    }),
     getProjects: build.query<Project[], void>({
       query: () => "projects", // Shorthand notation of line 74
       providesTags: ["Projects"], // When create a new project, Redux Toolkit automatically fetches the new projects --> Give the updated version
