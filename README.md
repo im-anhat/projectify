@@ -3,13 +3,15 @@
 > **Projectify** is a comprehensive project management platform designed to enhance organizational workflows. Built with **Next.js**, **Node.js**, and various **AWS services**, Projectify facilitates real-time communication, task management, and collaboration, ensuring teams stay organized and productive.
 
 
-<div style="display: flex; justify-content: space-between;">
-   
-<img width="450" alt="image" src="https://github.com/user-attachments/assets/61bbdd13-b3b6-4c7a-b134-58daa97ac8b8">
-
-<img width="550" alt="image" src="https://github.com/user-attachments/assets/6d16ad61-5d70-4894-a057-eeb4d38db34d">
-
-</div>
+<table>
+  <tr>
+    <td>
+<img width="500" alt="image" src="https://github.com/user-attachments/assets/61bbdd13-b3b6-4c7a-b134-58daa97ac8b8">
+    </td>
+    <td>
+<img width="500" alt="image" src="https://github.com/user-attachments/assets/6d16ad61-5d70-4894-a057-eeb4d38db34d">    </td>
+  </tr>
+</table>
 
 <img width="1238" alt="image" src="https://github.com/user-attachments/assets/7511a989-0948-4d05-a9bd-860c1c4ffe50">
 
@@ -44,22 +46,25 @@ Leveraged **Redux Toolkit** to manage global states efficiently, eliminating the
 
 Engineered a robust backend with **TypeScript**, **Express.js**, and **Prisma**, ensuring scalability and maintainability. Deployed on **AWS EC2**, **AWS RDS**, and **AWS API Gateway**, with **AWS Cognito** handling secure authentication, safeguarding user data and application integrity. Only authorize access to backend API endpoints for users through Cognito ID.
 
-<div style="display: flex; justify-content: space-between;">
-
+<table>
+  <tr>
+    <td>
   <img src="https://github.com/user-attachments/assets/891fde68-9db4-4dca-ac20-18b714994fde" alt="Image 1" width="483" />
-
+    </td>
+    <td>
   <img src="https://github.com/user-attachments/assets/2abc2828-81ca-4c8d-ad6e-7c6275c2c254" alt="Image 2" width="420" />
+  </tr>
+</table>
 
-</div>
-
-
-<div style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 40px;">
-
+<table>
+  <tr>
+    <td>
   <img src="https://github.com/user-attachments/assets/22ac1467-74b9-414d-9fa5-7a9b052006ef" alt="Additional Image 1" width="440" />
-
+    </td>
+    <td>
   <img src="https://github.com/user-attachments/assets/fdcfb61b-8e28-44cd-a624-ea05f1dba34a" alt="Additional Image 2" width="400" />
-
-</div>
+  </tr>
+</table>
 
 ### 📊 Interactive Dashboard
 
