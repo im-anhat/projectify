@@ -84,7 +84,7 @@ Created an intuitive dashboard that allows users to manage tasks, events, and co
 1. **Clone the Repository:**
 
    ```bash
-   git clone https://github.com/viettech-group3/projectify.git
+   git clone https://github.com/projectify.git
    cd projectify
    ```
 
